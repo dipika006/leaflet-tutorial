@@ -53,6 +53,18 @@
       marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
       circle.bindPopup("I am a circle.");
       polygon.bindPopup("I am a polygon.");
+
+      // define rectangle geographical bounds
+      var bounds = [
+        [54.559322, -5.767822],
+        [56.1210604, -3.02124],
+      ];
+
+      // create an orange rectangle
+      L.rectangle(bounds, { color: "#ff7800", weight: 1 }).addTo(map);
+
+      // zoom the map to the rectangle bounds
+      map.fitBounds(bounds);
     </script>
   </body>
 </html>
